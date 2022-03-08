@@ -8,7 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:radial-gradient(#dad7c1,#2c2802);
+    /* background:radial-gradient(#dad7c1,#2c2802); */
 
 }
 label{
@@ -56,17 +56,19 @@ label text{
 }
 label input:checked ~ text{
     filter: none;
+    display: none;
+    transition: 1.5s;
 }
 label text:last-child{
     position: absolute;
     left: initial;
     right: -100px;
     filter: none;
+    display: none;
+    transition: 1.5s;
 }
 label input:checked ~ text:last-child{
     color: #fff;
     filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff) drop-shadow(0 0 35px #fff);
-}
-label input:checked{
-    background: radial-gradient(#cfc463,#ffe70b);
+    display: block;
 }

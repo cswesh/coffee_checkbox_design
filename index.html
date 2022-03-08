@@ -9,10 +9,18 @@
 </head>
 <body>
     <label>
-        <input type="checkbox">
+        <input type="checkbox" id="chk">
         <span></span>
         <text>🥱</text>
         <text>⚡</text>
     </label>
+
+    <script>
+        document.querySelector('#chk').onchange = function (e) {
+        var check = e.target.checked;
+        var bgColor = check ? "radial-gradient(#cfc463,#ffe70b)" : "radial-gradient(#dad7c1,#2c2802)";
+        document.querySelector('body').style.background= bgColor ;
+    };
+    </script>
 </body>
 </html>
